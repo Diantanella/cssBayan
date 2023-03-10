@@ -1,0 +1,60 @@
+body {   
+    font-family: 'Tilt Warp', cursive;
+    font-size: 2.5em;
+    
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    box-shadow: 1px 70px 100px 5px rgba(0, 0, 0, 0.4)
+}
+
+.accordion {
+    /* background: white; */
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+.line {
+    width: 95%;
+    height: .15vh;
+    background-color: rgba(195, 195, 195, 0.807);
+    margin: 2% 0;
+}
+
+.accordion-item {
+ 
+    width: 95%;
+}
+
+.meme-title {}
+
+.meme-input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.meme-input:checked + .meme-content {
+    display: flex;
+}
+
+.meme-content {
+    display: none;
+    /* display: flex; */
+    
+}
+
+.meme-pic {
+    width: 30%;
+    border: 1px solid black;
+    margin: 5% auto;
+}
