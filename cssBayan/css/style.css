@@ -1,6 +1,7 @@
 body {   
     font-family: 'Tilt Warp', cursive;
     font-size: 2.5em;
+    display: flex;
     
 }
 
@@ -9,19 +10,18 @@ h1 {
 }
 
 .container {
+    display: flex;
     width: 80vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     background: linear-gradient(45deg, #EECFBA, #C5DDE8);
-    box-shadow: 1px 70px 100px 5px rgba(0, 0, 0, 0.4)
+    box-shadow: 1px 70px 100px 5px rgba(0, 0, 0, 0.4);
 }
 
 .accordion {
-    /* background: white; */
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    /* border: 1px solid black; */
 }
 
 .line {
@@ -32,29 +32,78 @@ h1 {
 }
 
 .accordion-item {
- 
     width: 95%;
 }
 
-.meme-title {}
+.meme-title {
+    color: rgb(34, 106, 153);
+    display: flex;
+    justify-content: space-between;
+}
+
+.meme-input:checked ~ label .meme-title::after {
+    transform: rotate(45deg);
+}
+
+.meme-title:after {
+    content: "";
+    background: url('../images/close.svg') no-repeat;
+    width: 1em;
+   
+}
 
 .meme-input {
     -webkit-appearance: none;
     appearance: none;
 }
 
-.meme-input:checked + .meme-content {
+.meme-input:checked ~ label .meme-content {
     display: flex;
+    justify-content: center;
 }
 
-.meme-content {
-    display: none;
-    /* display: flex; */
-    
+.meme-input:checked ~ label  .meme-content .meme-pic {
+    width: 25%;
+    opacity: 1;
+    height:auto;
+    visibility: visible;
+    margin: 2em auto;
 }
+
+
+.meme-input:checked ~ label .meme-title {
+    color: black;
+}
+
 
 .meme-pic {
-    width: 30%;
     border: 1px solid black;
-    margin: 5% auto;
+    opacity: 0;
+    visibility: hidden;
+    height:0;
+    transition: opacity 3s; 
+}
+
+
+
+.accordion-item:hover .meme-content { 
+    
+    display:flex;
+    justify-content: center;
+}
+
+.accordion-item:hover label .meme-title::after {
+    transform: rotate(45deg);
+}
+
+ .accordion-item:hover .meme-content .meme-pic { 
+   width: 25%;
+   opacity: 1;
+   visibility: visible;
+   height: auto;
+   margin: 2em auto;
+}
+
+.accordion:hover .accordion-item .meme-title {
+    color: black;   
 }
