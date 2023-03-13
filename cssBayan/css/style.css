@@ -125,6 +125,9 @@ label {
     .container {
         width: 100vw;
     }
+    .close {
+        visibility: visible;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -133,5 +136,8 @@ label {
     }
     .container {
         width: 100vw;
+    }
+    .close {
+        visibility: visible;
     }
 }
