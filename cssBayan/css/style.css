@@ -1,0 +1,143 @@
+body {   
+    font-family: 'Tilt Warp', cursive;
+    font-size: 2.5em;
+    display: flex;
+    
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 80vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    box-shadow: 0.06em 4.37em 6.25em 0.3em rgba(0, 0, 0, 0.4);
+}
+
+.accordion {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+label {
+    cursor: pointer;
+}
+
+.line {
+    width: 95%;
+    height: .15vh;
+    background-color: rgba(195, 195, 195, 0.807);
+    margin: 2% 0;
+}
+
+.accordion-item {
+    width: 95%;
+}
+
+.meme-title {
+    color: rgb(34, 106, 153);
+    display: flex;
+    justify-content: space-between;
+}
+
+.meme-input:checked ~ label .close {
+    transform: rotate(45deg);
+}
+
+.close {
+    width: 1em;
+   visibility: hidden;
+}
+
+.meme-input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.meme-input:checked ~ label .meme-content {
+    display: flex;
+    justify-content: center;
+}
+
+.meme-input:checked ~ label  .meme-content .meme-pic {
+    width: 25%;
+    opacity: 1;
+    height:auto;
+    visibility: visible;
+    margin: 2em auto;
+}
+
+
+.meme-input:checked ~ label .meme-title {
+    color: black;
+}
+
+
+.meme-pic {
+    border: 1px solid black;
+    opacity: 0;
+    visibility: hidden;
+    height:0;
+    transition: opacity 3s; 
+}
+
+
+
+
+/* media query */
+
+@media (hover:hover) {
+    .accordion-item:hover .meme-content { 
+        display:flex;
+        justify-content: center;
+    }
+    
+    .accordion-item:hover label .close {
+        transform: rotate(45deg);
+    }
+    
+     .accordion-item:hover .meme-content .meme-pic { 
+       width: 25%;
+       opacity: 1;
+       visibility: visible;
+       height: auto;
+       margin: 2em auto;
+    }
+    
+    .accordion:hover .accordion-item .meme-title {
+        color: black;
+    }
+
+    .accordion:hover .accordion-item .close {
+        visibility: visible;
+    }
+}
+ 
+@media screen and (max-width: 820px) {
+    body {
+        font-size: 1.5em;
+    }
+    .container {
+        width: 100vw;
+    }
+    .close {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: .7em;
+    }
+    .container {
+        width: 100vw;
+    }
+    .close {
+        visibility: visible;
+    }
+}
