@@ -45,13 +45,11 @@ label {
     justify-content: space-between;
 }
 
-.meme-input:checked ~ label .meme-title::after {
+.meme-input:checked ~ label .close {
     transform: rotate(45deg);
 }
 
-.meme-title:after {
-    content: "";
-    background: url('../images/close.svg') no-repeat;
+.close {
     width: 1em;
    
 }
@@ -99,7 +97,7 @@ label {
         justify-content: center;
     }
     
-    .accordion-item:hover label .meme-title::after {
+    .accordion-item:hover label .close {
         transform: rotate(45deg);
     }
     
