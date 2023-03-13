@@ -51,7 +51,7 @@ label {
 
 .close {
     width: 1em;
-   
+   visibility: hidden;
 }
 
 .meme-input {
@@ -111,6 +111,10 @@ label {
     
     .accordion:hover .accordion-item .meme-title {
         color: black;
+    }
+
+    .accordion:hover .accordion-item .close {
+        visibility: visible;
     }
 }
  
